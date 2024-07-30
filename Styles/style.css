@@ -1,0 +1,133 @@
+body {
+    background-color: #aaa;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+.calculator {
+    width: 128px;
+    height: auto;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+h1 {
+    top: 175px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.inputs {
+    background-color: #fff;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.numbersAndOperators {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+
+.numbersAndOperators button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0
+}
+
+.numbersAndOperators button:hover {
+    background-color: #d0d0d0
+}
+
+.numbersAndOperators .C {
+    grid-column: span 2;
+    width: calc(100px + 10px); /* 110px */
+    height: 50px
+}
+
+.numbersAndOperators .plus {
+    grid-row: span 2;
+    height: calc(100px + 10px); /* 110px */
+    width: 50px
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        width: 30%
+    }
+
+    h1 {
+        font-size: 6vw
+    }
+
+    .numbersAndOperators button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px
+    }
+
+    .numbersAndOperators .C {
+        width: calc(80px + 10px); /* 90px */
+        height: 40px
+    }
+
+    .numbersAndOperators .plus {
+        height: calc(80px + 10px); /* 90px */
+        width: 40px
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 40%
+    }
+
+    h1 {
+        font-size: 8vw
+    }
+
+    .numbersAndOperators button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px
+    }
+
+    .numbersAndOperators .C {
+        width: calc(60px + 10px); /* 70px */
+        height: 30px
+    }
+
+    .numbersAndOperators .plus {
+        height: calc(60px + 10px); /* 70px */
+        width: 30px
+    }
+}
+
+@media (max-height: 800px) {
+    h1 {
+        display: none
+    }
+}
+
+@media (max-height: 700px) {
+    .calculator {
+        display: none
+    }
+}
